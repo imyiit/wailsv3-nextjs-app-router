@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=go-test
+Exec=go-test
+Icon=go-test
+Categories=Development;
+Terminal=false
+Keywords=wails
+Version=1.0
+StartupNotify=false
