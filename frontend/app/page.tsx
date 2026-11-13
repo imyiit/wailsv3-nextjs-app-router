@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4 ">
       <input
-        className="rounded border px-3 py-2 text-black"
+        className="rounded border px-3 py-2"
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Name"
@@ -33,7 +33,7 @@ export default function Home() {
       <button className="rounded bg-blue-600 px-4 py-2" onClick={handleGreet}>
         Say Hello
       </button>
-      <p className="bg-white">{result}</p>
+      <p>{result}</p>
       <p>{time || "Clock Waiting..."}</p>
     </main>
   );
