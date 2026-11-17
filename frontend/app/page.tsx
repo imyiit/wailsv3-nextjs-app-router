@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Greet } from "../bindings/changeme/greetservice";
 import { Events } from "@wailsio/runtime";
+import { toast } from "sonner";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -16,7 +17,9 @@ export default function Home() {
 
   async function handleGreet() {
     try {
-      setResult(await Greet(name));
+      const res = await Greet(name);
+      setResult(res);
+      toast.success(res);
     } catch (err) {
       setResult(`Hata: ${String(err)}`);
     }
